@@ -40,7 +40,7 @@ Similarly, use the commands in **run_test.sh** to recreate the calibrated segmen
 
 
 ## Create own dataset and train your own models
-Follow the instructions in our [JunoCam Calibration utils repo](...) to generate your own training dataset (custom_dataset) from flattened JunoCam and HST maps and place it under datasets/.
+Follow the instructions in our [JunoCam Calibration utils repo](https://github.com/junocamcalibration/JunoCam_calibration_utils) to generate your own training dataset (custom_dataset) from flattened JunoCam and HST maps and place it under datasets/.
 To train the RGB calibration model for specific PJs, Cycles, and zones:
 ```
 python train.py --dataroot ./datasets/custom_dataset --name junocam_calibration_custom_model --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --dataset_mode unaligned_npy --phase train --input_nc 3 --output_nc 3 --use_zone_pairs --fix_time_bug --PJs 18 19 20 --cycles 26 27 --zones SEB
